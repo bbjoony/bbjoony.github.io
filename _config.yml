@@ -2,7 +2,7 @@ title:              The life is REAL
 email:              bbjoony@gmail.com
 description:        Software Testing Blog
 author:             Jin Seokjun
-baseurl:            "/"
+baseurl:            "/_post"
 url:                "https://bbjoony.github.io"
 
 # Social Profiles
