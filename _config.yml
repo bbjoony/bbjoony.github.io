@@ -3,32 +3,10 @@ author: bbjoony
 email: bbjoony@gmail.com
 description: > 
   중년의 게임QA가 기록하는 일상과 업무 이야기.
-  게임 테스팅 경험과 개인적인 생각들을 나누는 공간입니다.
-show_excerpts: true
 
-# Build settings
-remote_theme: samarsault/plainwhite-jekyll
-
-# Theme configuration
-plainwhite:
-  name: bbjoony
-  tagline: Game QA & Life Stories
-  date_format: "%Y년 %m월 %d일"  # 한국어 날짜 형식
-  sitemap: true
-  search: true
-  dark_mode: true
-  html_lang: "ko"
-  
-  # 소셜 링크
-  social_links:
-    github: bbjoony
-    linkedIn: in/seokjun-jin-05215a48  # https://www.linkedin.com/ 부분 제거
-    email: bbjoony@gmail.com
-
-# SEO 설정
-lang: ko_KR
-timezone: Asia/Seoul  # 한국 시간대
+# GitHub Pages 기본 테마
+theme: minima
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-seo-tag
