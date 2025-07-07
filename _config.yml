@@ -6,7 +6,7 @@ description: >
   게임 테스팅 경험과 개인적인 생각들을 나누는 공간입니다.
 
 # 테마 변경
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-feed
