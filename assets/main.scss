@@ -1,0 +1,37 @@
+---
+---
+
+/* 기본 페이지 스타일 개선 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+}
+
+/* 사이드바 Copyright 텍스트 숨기기 */
+.site-footer {
+  display: none !important;
+}
+
+/* 기본 컨테이너 스타일 */
+.main-content {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 반응형 개선 */
+@media screen and (max-width: 768px) {
+  .main-content {
+    margin: 10px;
+    padding: 20px !important;
+  }
+}
+
+/* 링크 스타일 개선 */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
