@@ -5,24 +5,11 @@ description: >
   중년의 게임QA가 기록하는 일상과 업무 이야기.
   게임 테스팅 경험과 개인적인 생각들을 나누는 공간입니다.
 
-# GitHub Pages 기본 테마
-theme: minima
-
-# 기본 설정
-show_excerpts: true
-excerpt_separator: "<!--more-->"
-
-# Minima 테마 설정
-minima:
-  skin: auto # auto, classic, dark, solarized-light, solarized-dark
-  social_links:
-    github: bbjoony
-    email: bbjoony@gmail.com
+# 테마 변경
+theme: jekyll-theme-slate
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# SEO
-lang: ko_KR
-timezone: Asia/Seoul
+show_excerpts: true
