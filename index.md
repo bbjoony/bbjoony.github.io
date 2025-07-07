@@ -1,6 +1,8 @@
 ---
-layout: home
+layout: default
 ---
+
+# The life is REAL
 
 안녕하세요! 👋
 
