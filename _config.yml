@@ -1,9 +1,9 @@
-title: The life is REAL  # 원하는 제목으로 변경
-author: bbjoony  # 본인 이름으로 변경
-email: bbjoony@gmail.com  # 본인 이메일로 변경
+title: The life is REAL
+author: bbjoony
+email: bbjoony@gmail.com
 description: > 
-  중년의 게임QA 
-  Google 검색 결과와 RSS 피드에 표시됩니다.
+  중년의 게임QA가 기록하는 일상과 업무 이야기.
+  게임 테스팅 경험과 개인적인 생각들을 나누는 공간입니다.
 show_excerpts: true
 
 # Build settings
@@ -11,20 +11,23 @@ remote_theme: samarsault/plainwhite-jekyll
 
 # Theme configuration
 plainwhite:
-  name: bbjoony  # 본인 이름으로 변경
-  tagline: game QA  # 원하는 태그라인으로 변경
-  date_format: "%b %-d, %Y"
+  name: bbjoony
+  tagline: Game QA & Life Stories
+  date_format: "%Y년 %m월 %d일"  # 한국어 날짜 형식
   sitemap: true
   search: true
   dark_mode: true
-  html_lang: "ko"  # 한국어 사이트라면 "ko"
+  html_lang: "ko"
   
-  # 소셜 링크 (사용하지 않는 것들은 주석 처리하거나 삭제)
+  # 소셜 링크
   social_links:
-    github: bbjoony  # 본인 GitHub 아이디
-    twitter: bbjoony
-    linkedIn: https://www.linkedin.com/in/seokjun-jin-05215a48/
-    email: bbjoony@gmail.com 
+    github: bbjoony
+    linkedIn: in/seokjun-jin-05215a48  # https://www.linkedin.com/ 부분 제거
+    email: bbjoony@gmail.com
+
+# SEO 설정
+lang: ko_KR
+timezone: Asia/Seoul  # 한국 시간대
 
 plugins:
   - jekyll-seo-tag
