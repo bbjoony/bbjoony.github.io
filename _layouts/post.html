@@ -1,39 +1,31 @@
 ---
 layout: default
 ---
-{%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
-<div class="post-container">
-  <a class="post-link" href="{{ page.url | relative_url }}">
-    <h2 class="post-title">{{ page.title | escape }}</h2>
-  </a>
-  <div class="post-meta">
-    <div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
-    {%- if page.categories.size > 0 -%}
-    <ul class="post-categories">
-      {%- for tag in page.categories -%}
-      <li>{{ tag }}</li>
-      {%- endfor -%}
-    </ul>
-    {%- endif -%}
-  </div>
-  <div class="post">
+
+<div style="max-width: 800px; margin: 40px auto; padding: 40px 20px; background-color: white; min-height: 80vh;">
+
+  <header style="margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 20px;">
+    <h1 style="color: #333; margin-bottom: 10px;">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <h2 style="color: #666; font-weight: normal; font-size: 1.2em; margin-bottom: 15px;">{{ page.subtitle }}</h2>
+    {% endif %}
+    <p style="color: #888; font-size: 14px;">
+      {{ page.date | date: "%Y년 %m월 %d일" }}
+      {% if page.categories.size > 0 %}
+        · 
+        {% for category in page.categories %}
+          <span style="background-color: #f1f3f4; padding: 2px 8px; border-radius: 3px; font-size: 12px;">{{ category }}</span>
+        {% endfor %}
+      {% endif %}
+    </p>
+  </header>
+
+  <article style="line-height: 1.7; color: #333;">
     {{ content }}
+  </article>
+
+  <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; text-align: center;">
+    <a href="/" style="background-color: #f8f9fa; color: #0366d6; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #d0d7de;">← 홈으로 돌아가기</a>
   </div>
-  {%- if site.plainwhite.disqus_shortname -%}
-  <div id="disqus_thread" style="margin-top:25px"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = '{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ page.url | absolute_url }}';
-    };
-    (function () {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://{{ site.plainwhite.disqus_shortname }}.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
-      powered by Disqus.</a></noscript>
-  {%- endif -%}
+
 </div>
