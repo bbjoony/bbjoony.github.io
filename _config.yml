@@ -5,8 +5,7 @@ description: >
   중년의 게임QA가 기록하는 일상과 업무 이야기.
   게임 테스팅 경험과 개인적인 생각들을 나누는 공간입니다.
 
-# 테마 변경
-theme: jekyll-theme-cayman
+# 테마는 Clean Blog 테마 사용 (로컬 테마)
 
 plugins:
   - jekyll-feed
