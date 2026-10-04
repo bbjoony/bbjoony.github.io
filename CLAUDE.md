@@ -36,6 +36,9 @@
 - `_includes/metadata-hook.html`: Chirpy 가 `<head>` 에 넣어 주는 사용자 include 입니다. 데스크톱(850px 이상) 사이드바 접기(기본 접힘, 상태는 localStorage)와
   홈의 "홈" 메뉴 선택 표시를 여기서 CSS·스크립트로 처리합니다. Chirpy 의 `sidebar.html` 은 덮어쓰지 않습니다.
   compress 레이아웃이 줄바꿈을 지우므로 인라인 스크립트에 `//` 주석을 쓰면 안 됩니다.
+- 글 본문은 `word-break: keep-all`(단어 단위 줄바꿈, 왼쪽 정렬)입니다. 양쪽 정렬은 한국어에서 간격이 벌어져 쓰지 않기로 했습니다(2026-10-04). CSS 는 `metadata-hook.html` 에 있습니다.
+- `_plugins/normalize-nbsp-hook.rb`: Pages CMS 로 쓴 글에 섞여 들어오는 줄바꿈 금지 공백(U+00A0)을 렌더링 전에 일반 공백으로 바꿉니다.
+  이 공백이 남아 있으면 단어 단위 줄바꿈에서 줄이 괄호 같은 곳에서만 끊깁니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
 - `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).

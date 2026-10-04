@@ -20,6 +20,13 @@
 </script>
 
 <style>
+  /* 글 본문은 한국어 단어 중간에서 줄을 바꾸지 않습니다(정렬은 왼쪽 그대로).
+     긴 영문·주소는 화면 밖으로 넘치지 않도록 필요할 때만 중간에서 끊습니다. */
+  article .content {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
   #sidebar-collapse-toggle {
     display: none;
   }
