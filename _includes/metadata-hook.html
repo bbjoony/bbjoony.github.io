@@ -198,11 +198,12 @@
 {% if site.analytics.goatcounter.id %}
   <script>
     /* 푸터 첫 줄(© 연도 작성자) 뒤에 GoatCounter 의 사이트 전체 누적 방문자 수를 붙입니다.
-       GoatCounter 설정의 "allow using the visitor counter" 가 꺼져 있거나 요청이 실패하면 아무것도 표시하지 않습니다. */
+       GoatCounter 설정의 "allow using the visitor counter" 가 꺼져 있거나 요청이 실패하면 아무것도 표시하지 않습니다.
+       기간 없이 조회하면 GoatCounter 프록시가 결과를 오래 캐시하므로 start 를 붙입니다. */
     document.addEventListener('DOMContentLoaded', function () {
       var target = document.querySelector('footer p');
       if (!target) return;
-      fetch('https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/TOTAL.json')
+      fetch('https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/TOTAL.json?start=2020-01-01')
         .then(function (res) {
           if (!res.ok) throw new Error(res.status);
           return res.json();

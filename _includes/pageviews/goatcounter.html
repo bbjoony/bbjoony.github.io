@@ -1,0 +1,23 @@
+<!-- Display GoatCounter pageviews -->
+<!-- Chirpy 7.6.0 의 같은 파일을 덮어씁니다. 기간 없이 조회하면 GoatCounter 프록시가 결과를 오래 캐시해서
+     숫자가 0 으로 멈춰 있으므로, 조회 주소에 ?start=2020-01-01 을 붙인 것만 다릅니다. -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pv = document.getElementById('pageviews');
+
+    if (pv !== null) {
+      const uri = location.pathname.replace(/\/$/, '');
+      const url = `https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/${encodeURIComponent(uri)}.json?start=2020-01-01`;
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const count = data.count.replace(/\D/g, '');
+          pv.innerText = new Intl.NumberFormat().format(count);
+        })
+        .catch((error) => {
+          pv.innerText = '1';
+        });
+    }
+  });
+</script>
