@@ -37,6 +37,7 @@
   홈의 "홈" 메뉴 선택 표시를 여기서 CSS·스크립트로 처리합니다. Chirpy 의 `sidebar.html` 은 덮어쓰지 않습니다.
   compress 레이아웃이 줄바꿈을 지우므로 인라인 스크립트에 `//` 주석을 쓰면 안 됩니다.
 - 글 본문은 `word-break: keep-all`(단어 단위 줄바꿈, 왼쪽 정렬)입니다. 양쪽 정렬은 한국어에서 간격이 벌어져 쓰지 않기로 했습니다(2026-10-04). CSS 는 `metadata-hook.html` 에 있습니다.
+- 글 맨 위 대표 이미지(front matter `image`)는 Chirpy 기본값인 40:21 자르기 대신 원래 비율로, 높이 최대 `min(70vh, 640px)`, 양옆 배경 없이 보여 줍니다(`metadata-hook.html`).
 - `_plugins/normalize-nbsp-hook.rb`: Pages CMS 로 쓴 글에 섞여 들어오는 줄바꿈 금지 공백(U+00A0)을 렌더링 전에 일반 공백으로 바꿉니다.
   이 공백이 남아 있으면 단어 단위 줄바꿈에서 줄이 괄호 같은 곳에서만 끊깁니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.

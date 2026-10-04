@@ -27,6 +27,30 @@
     overflow-wrap: anywhere;
   }
 
+  /* 글 맨 위 대표 이미지(front matter image)를 Chirpy 기본값인 40:21 틀에 맞춰 자르지 않고
+     원래 비율로 보여 줍니다. 세로 사진도 화면을 다 차지하지 않도록 높이를 제한합니다.
+     사진 양옆에 테마의 회색 배경이 보이지 않도록 배경을 빼고, 둥근 모서리는 사진에 줍니다. */
+  article a.preview-img {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: auto;
+    height: auto;
+    border-radius: 0;
+  }
+
+  article a.preview-img:not(.shimmer) {
+    background: none;
+  }
+
+  article a.preview-img img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: min(70vh, 640px);
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
   #sidebar-collapse-toggle {
     display: none;
   }
