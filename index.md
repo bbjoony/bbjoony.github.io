@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 중년 게임QA의 일상과 업무 기록
+title: The life is REAL
 ---
 
 <style>
@@ -24,6 +24,11 @@ title: 중년 게임QA의 일상과 업무 기록
   .home-posts time { flex-shrink: 0; color: var(--text-muted-color); font-size: 0.85rem; }
   .home-more { display: inline-block; margin-top: 0.75rem; }
 </style>
+
+<script>
+  /* 홈 제목이 블로그 이름과 같아서 Chirpy 가 탭 제목을 "The life is REAL | The life is REAL" 로 만들므로 하나로 줄입니다. */
+  document.title = {{ site.title | jsonify }};
+</script>
 
 <section class="home-section">
 <h2>소개</h2>
