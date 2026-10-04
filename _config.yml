@@ -230,8 +230,6 @@ exclude:
   - Gemfile.lock
   - vendor
   - CLAUDE.md
-  - WARP.md
-  - WARP_PROJECT.md
 
 jekyll-archives:
   enabled: [categories, tags]

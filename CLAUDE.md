@@ -49,7 +49,3 @@
 
 - 이미지는 `assets/img/posts/` 에 두고 `/assets/img/posts/파일명` 으로 씁니다.
 - 이전 테마의 샘플 글은 2026-10-04 에 지웠습니다.
-
-## 남은 일
-
-- `WARP.md`, `WARP_PROJECT.md` 는 Chirpy 이전(plainwhite) 상태를 설명합니다.
