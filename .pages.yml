@@ -14,11 +14,11 @@ content:
     type: collection
     path: _posts
     exclude: [.placeholder]
-    # 제목이 한글이면 파일 이름(= 글 주소 /posts/<이름>/)이 비거나 어색해질 수 있어서,
-    # 새 글을 만들 때 파일 이름을 직접 고칠 수 있게 합니다. 예: 2026-10-04-chirpy-migration.md
+    # 한글 제목으로는 영문 파일 이름을 만들지 못해서(2026-10-04-.md 처럼 비어 버림)
+    # 필수 입력란 "주소"(slug)로 파일 이름과 글 주소 /posts/<주소>/ 를 정합니다.
     filename:
-      template: "{year}-{month}-{day}-{primary}.md"
-      field: create
+      template: "{year}-{month}-{day}-{fields.slug}.md"
+      field: false
     view:
       fields: [title, date, published]
       primary: title
@@ -31,6 +31,10 @@ content:
         label: 제목
         type: string
         required: true
+      - name: slug
+        label: 주소 (영문 소문자와 하이픈, 예 crema-carta-clock → /posts/crema-carta-clock/)
+        type: string
+        required: true
       - name: description
         label: 요약 (글 목록과 검색 결과에 보임)
         type: string
@@ -39,7 +43,8 @@ content:
         type: date
         options:
           time: true
-          format: "yyyy-MM-dd HH:mm:ss xx"
+          # 시간대를 붙이면 UTC(+0000)로 저장되어 미래 글로 빠지므로, 시간대 없이 저장해 _config.yml 의 Asia/Seoul 로 해석되게 합니다.
+          format: "yyyy-MM-dd HH:mm:ss"
       - name: categories
         label: 카테고리 (첫 번째가 상위, 두 번째가 하위 카테고리)
         type: string

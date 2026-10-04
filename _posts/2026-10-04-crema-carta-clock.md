@@ -1,7 +1,8 @@
 ---
 title: 크레마 카르타로 시계 만들기
+slug: crema-carta-clock
 description: "이제 더 이상 지원되지 않는 크레마 카르타를 시계로 만들어 봤습니다. "
-date: 2026-10-04 16:40:00 +0000
+date: 2026-10-04 16:40:00 +0900
 tags:
   - 크레마카르타
 image: /assets/img/posts/mutijbjt-yjueaws0.jpeg
@@ -18,4 +19,4 @@ published: true
 
 크레마 카르타가 항상 전원에 연결되어 있어야 한다는 제약도 있지만, 그래도 AI를 활용해 손에 잡히는 결과물을 만들어냈다는 점에서 의미 있는 프로젝트였던 것 같습니다. AI를 통해 이전보다 코딩에 손쉽게 접근할 수 있었고, 이 프로젝트를 계기로 더 많은 것에 도전할 수 있는 동기가 생긴 것 같습니다. 다음엔 또 어떤 것을 해볼까 싶습니다.  
 
-++[https://github.com/bbjoony/crema-project](https://github.com/bbjoony/crema-project)++
+[https://github.com/bbjoony/crema-project](https://github.com/bbjoony/crema-project)
