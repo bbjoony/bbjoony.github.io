@@ -29,6 +29,7 @@
 - `_config.yml`: chirpy-starter 설정에 제목, 태그라인, 설명, `lang: ko-KR`, `timezone: Asia/Seoul`, GitHub·이메일을 채웠습니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
+- `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).
 - 레이아웃과 CSS 는 gem 안에 있습니다. 바꿔야 하면 gem 의 파일을 같은 경로로 복사해서 덮어씁니다.
 - 글 주소는 `/posts/:title/` 입니다(예전 주소 `/2025/07/07/qa_conference.html` 등은 더 이상 열리지 않습니다).
 
@@ -47,10 +48,8 @@
   ```
 
 - 이미지는 `assets/img/posts/` 에 두고 `/assets/img/posts/파일명` 으로 씁니다.
-- 직접 쓴 글은 `2025-07-07-blog-start.md`, `2025-07-07-qa_conference.md` 입니다.
-  2019–2020 날짜의 글(`welcome-to-jekyll`, `dinosaurs`, `heartbeats` 등)과 `img/` 는 이전 테마의 샘플입니다. 사용자 확인 없이 지우지 않습니다.
+- 이전 테마의 샘플 글은 2026-10-04 에 지웠습니다.
 
 ## 남은 일
 
-- `_config.yml` 의 `avatar`(프로필 사진)가 비어 있습니다.
 - `WARP.md`, `WARP_PROJECT.md` 는 Chirpy 이전(plainwhite) 상태를 설명합니다.
