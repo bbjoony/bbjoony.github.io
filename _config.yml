@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: The life is REAL # the main title
 
-tagline: 중년 게임QA가 기록하는 일상과 업무 이야기 # it will display as the subtitle
+tagline: 게임 QA의 일상과 인사이트 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   중년의 게임QA가 기록하는 일상과 업무 이야기.
