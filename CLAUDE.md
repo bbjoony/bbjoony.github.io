@@ -27,6 +27,7 @@
 - native gem 을 설치할 때는 `SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk` 를 붙입니다.
   Command Line Tools 26.6 의 링커가 기본 SDK(macOS 27)를 읽지 못합니다.
 - `_config.yml` 을 바꾸면 서버를 다시 시작해야 반영됩니다.
+- PWA 오프라인 캐시(`pwa.cache.enabled`)는 껐습니다. 켜 두면 방문자 브라우저가 저장본을 먼저 보여 줘서, 수정 사항이 "업데이트" 알림을 누르기 전까지 보이지 않습니다.
 
 ## 구조
 

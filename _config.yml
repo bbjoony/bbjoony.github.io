@@ -151,7 +151,8 @@ assets:
 pwa:
   enabled: true # The option for PWA feature (installable)
   cache:
-    enabled: true # The option for PWA offline cache
+    # 글을 고친 뒤 일반 새로고침으로 바로 반영되도록 오프라인 캐시는 끕니다(2026-10-04).
+    enabled: false # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
