@@ -5,8 +5,10 @@ description: "이제 더 이상 지원되지 않는 크레마 카르타를 시�
 date: 2026-10-04 23:03:00
 categories:
   - 일상
+  - AI
 tags:
   - 크레마카르타
+  - claude
 image: /assets/img/posts/mutijbjt-yjueaws0.jpeg
 featured: true
 published: true
