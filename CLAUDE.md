@@ -41,6 +41,8 @@
 - 글 맨 위 대표 이미지(front matter `image`)는 Chirpy 기본값인 40:21 자르기 대신 원래 비율로, 높이 최대 `min(70vh, 640px)`, 양옆 배경 없이 보여 줍니다(`metadata-hook.html`).
 - `_plugins/normalize-nbsp-hook.rb`: Pages CMS 로 쓴 글에 섞여 들어오는 줄바꿈 금지 공백(U+00A0)을 렌더링 전에 일반 공백으로 바꿉니다.
   이 공백이 남아 있으면 단어 단위 줄바꿈에서 줄이 괄호 같은 곳에서만 끊깁니다.
+- 댓글: giscus(`_config.yml` 의 `comments`). 댓글은 이 저장소 GitHub Discussions 의 Announcements 분류에 글마다 토론으로 저장됩니다.
+  giscus GitHub App 은 이 저장소에만 설치했습니다. 댓글을 쓰려면 GitHub 로그인이 필요합니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
 - `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).
