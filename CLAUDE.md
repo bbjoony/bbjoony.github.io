@@ -7,6 +7,10 @@
 
 - `main` 에 push 하면 `.github/workflows/pages-deploy.yml`(GitHub Actions)이 빌드해서 https://bbjoony.github.io/ 에 배포합니다.
   저장소 Settings → Pages 의 Source 가 "GitHub Actions" 여야 합니다(Chirpy 이전에는 "Deploy from a branch" 였습니다).
+- push 와 `gh` 저장소 설정 변경은 개인 계정 `bbjoony` 로만 됩니다. 평소 활성 계정인 회사 계정 `seokjunjin` 은 읽기 권한뿐입니다.
+  `gh auth switch --user bbjoony` 로 바꾼 뒤, 전역 git 설정은 건드리지 않고
+  `git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push origin main` 으로 push 합니다.
+  끝나면 `gh auth switch --user seokjunjin` 으로 되돌립니다.
 - 공개 저장소이므로 올리면 바로 공개됩니다. 개인 정보나 회사 내부 내용이 들어가지 않게 주의합니다.
 - 루트의 파일은 기본적으로 사이트에 공개됩니다. 문서나 설정 파일을 새로 만들면 `_config.yml` 의 `exclude` 에 추가합니다.
 
