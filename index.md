@@ -4,6 +4,21 @@ title: 중년 게임QA의 일상과 업무 기록
 ---
 
 <style>
+  .home-cover {
+    margin: 1.5rem 0 0.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .home-cover img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  @media (max-width: 576px) {
+    .home-cover img { height: 180px; }
+  }
   .home-section { margin-bottom: 2rem; }
   .home-card {
     background: var(--card-bg);
@@ -24,6 +39,18 @@ title: 중년 게임QA의 일상과 업무 기록
   .home-posts time { flex-shrink: 0; color: var(--text-muted-color); font-size: 0.85rem; }
   .home-more { display: inline-block; margin-top: 0.75rem; }
 </style>
+
+<div class="home-cover">
+  <img src="{{ '/assets/img/cover/cover_01.jpg' | relative_url }}" alt="저녁 시간의 책상 풍경" width="2048" height="740">
+</div>
+<script>
+  /* 페이지 레이아웃이 제목(h1)을 본문보다 먼저 그리므로, 커버를 제목 위로 옮깁니다. */
+  (function () {
+    var cover = document.querySelector('.home-cover');
+    var title = document.querySelector('article h1.dynamic-title');
+    if (cover && title) title.parentNode.insertBefore(cover, title);
+  })();
+</script>
 
 <section class="home-section">
 <h2>소개</h2>
