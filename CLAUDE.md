@@ -27,6 +27,8 @@
 ## 구조
 
 - `_config.yml`: chirpy-starter 설정에 제목, 태그라인, 설명, `lang: ko-KR`, `timezone: Asia/Seoul`, GitHub·이메일을 채웠습니다.
+- `index.md`: 홈. blog.idean.me 처럼 소개 카드, 주요 글(front matter 에 `featured: true` 인 글), 최근 글 5개, 전체 글(`/archives/`) 링크로 구성합니다.
+  Chirpy 기본 홈(글 카드 목록, 페이지 나누기)은 쓰지 않아서 `_config.yml` 의 `paginate` 를 껐습니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
 - `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).
@@ -44,6 +46,7 @@
   date: YYYY-MM-DD HH:MM:SS +0900
   categories: [상위 카테고리, 하위 카테고리]
   tags: [태그1, 태그2]
+  featured: true   # 홈의 "주요 글"에 넣을 때만
   ---
   ```
 

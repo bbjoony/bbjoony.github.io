@@ -158,7 +158,8 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+# 홈(index.md)이 글 목록 대신 소개·주요 글·최근 글을 보여 주므로 페이지 나누기를 쓰지 않습니다.
+# paginate: 10
 
 # The base URL of your site
 baseurl: ""
