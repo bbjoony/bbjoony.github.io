@@ -46,6 +46,8 @@
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
 - `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).
+- `assets/img/favicons/`: 프로필 일러스트로 만든 파비콘 세트입니다. 테마 기본 파비콘(개미 그림)을 같은 파일 이름으로 덮어씁니다.
+  홈 화면용(`apple-touch-icon.png`, `web-app-manifest-512x512.png`)은 흰 배경에 여백을 두었습니다.
 - 레이아웃과 CSS 는 gem 안에 있습니다. 바꿔야 하면 gem 의 파일을 같은 경로로 복사해서 덮어씁니다.
 - 글 주소는 `/posts/:title/` 입니다(예전 주소 `/2025/07/07/qa_conference.html` 등은 더 이상 열리지 않습니다).
 
