@@ -2,7 +2,7 @@
 title: 크레마 카르타로 시계 만들기
 slug: crema-carta-clock
 description: "이제 더 이상 지원되지 않는 크레마 카르타를 시계로 만들어 봤습니다. "
-date: 2026-10-04 23:03:00
+date: 2026-10-04 16:40:00 +0900
 categories:
   - 일상
   - AI

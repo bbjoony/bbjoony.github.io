@@ -43,8 +43,9 @@ content:
         type: date
         options:
           time: true
-          # 시간대를 붙이면 UTC(+0000)로 저장되어 미래 글로 빠지므로, 시간대 없이 저장해 _config.yml 의 Asia/Seoul 로 해석되게 합니다.
-          format: "yyyy-MM-dd HH:mm:ss"
+          # 에디터는 입력한 한국 시각에 시간대를 +0000 으로 붙이고, 시간대를 빼면 YAML 이 UTC 로 읽어서
+          # 어느 쪽이든 9시간 미래 글이 되어 빌드에서 빠집니다. 그래서 +0900 을 고정 문자로 붙여 저장합니다.
+          format: "yyyy-MM-dd HH:mm:ss '+0900'"
       - name: categories
         label: 카테고리 (첫 번째가 상위, 두 번째가 하위 카테고리)
         type: string
