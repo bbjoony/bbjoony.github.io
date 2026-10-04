@@ -4,6 +4,21 @@ title: The life is REAL
 ---
 
 <style>
+  .home-cover {
+    margin: 1.5rem 0 0.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .home-cover img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  @media (max-width: 576px) {
+    .home-cover img { height: 180px; }
+  }
   .home-section { margin-bottom: 2rem; }
   .home-card {
     background: var(--card-bg);
@@ -28,6 +43,18 @@ title: The life is REAL
 <script>
   /* 홈 제목이 블로그 이름과 같아서 Chirpy 가 탭 제목을 "The life is REAL | The life is REAL" 로 만들므로 하나로 줄입니다. */
   document.title = {{ site.title | jsonify }};
+</script>
+
+<div class="home-cover">
+  <img src="{{ '/assets/img/cover/cover_02.jpg' | relative_url }}" alt="시계 화면이 켜진 모니터와 화분이 있는 책상" width="1270" height="423">
+</div>
+<script>
+  /* 페이지 레이아웃이 제목(h1)을 본문보다 먼저 그리므로, 커버를 제목 위로 옮깁니다. */
+  (function () {
+    var cover = document.querySelector('.home-cover');
+    var title = document.querySelector('article h1.dynamic-title');
+    if (cover && title) title.parentNode.insertBefore(cover, title);
+  })();
 </script>
 
 <section class="home-section">
