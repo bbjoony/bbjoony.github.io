@@ -44,6 +44,9 @@
 
 ## 글 쓰기
 
+- 웹 에디터: [Pages CMS](https://app.pagescms.org) 에 `bbjoony` 로 로그인해서 씁니다(GitHub App 은 이 저장소에만 설치).
+  설정은 `.pages.yml` 입니다. 저장하면 `main` 에 바로 커밋·배포됩니다. "공개"를 끄면 `published: false` 로 저장되어 블로그에 나오지 않습니다.
+  업로드한 이미지는 `assets/img/posts/` 에 임의 이름으로 들어갑니다. 에디터에서 커밋하므로 로컬 작업 전에는 `git pull` 합니다.
 - `_posts/YYYY-MM-DD-제목.md` 로 만듭니다. `layout`, `permalink` 는 기본값이 들어가므로 쓰지 않습니다.
 
   ```yaml

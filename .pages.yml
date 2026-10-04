@@ -1,0 +1,85 @@
+# Pages CMS(https://app.pagescms.org) 웹 에디터 설정입니다.
+# 저장하면 main 에 커밋되고 GitHub Actions 가 바로 배포합니다.
+
+media:
+  input: assets/img/posts
+  output: /assets/img/posts
+  categories: [image]
+  # 한글 파일명은 주소에서 깨지기 쉬워서 업로드할 때 임의의 영문 이름으로 바꿉니다.
+  rename: random
+
+content:
+  - name: posts
+    label: 글
+    type: collection
+    path: _posts
+    exclude: [.placeholder]
+    # 제목이 한글이면 파일 이름(= 글 주소 /posts/<이름>/)이 비거나 어색해질 수 있어서,
+    # 새 글을 만들 때 파일 이름을 직접 고칠 수 있게 합니다. 예: 2026-10-04-chirpy-migration.md
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
+    view:
+      fields: [title, date, published]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: description
+        label: 요약 (글 목록과 검색 결과에 보임)
+        type: string
+      - name: date
+        label: 날짜
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd HH:mm:ss xx"
+      - name: categories
+        label: 카테고리 (첫 번째가 상위, 두 번째가 하위 카테고리)
+        type: string
+        list: true
+      - name: tags
+        label: 태그
+        type: string
+        list: true
+      - name: image
+        label: 대표 이미지 (선택)
+        type: image
+      - name: featured
+        label: 홈의 "주요 글"에 표시
+        type: boolean
+        default: false
+      - name: published
+        label: 공개 (끄면 저장만 되고 블로그에는 나오지 않음)
+        type: boolean
+        default: true
+      - name: body
+        label: 본문
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: about
+    label: 정보 페이지
+    type: file
+    path: _tabs/about.md
+    fields:
+      - name: icon
+        type: string
+        hidden: true
+        default: fas fa-info-circle
+      - name: order
+        type: number
+        hidden: true
+        default: 4
+      - name: body
+        label: 본문
+        type: rich-text
+        options:
+          format: markdown
