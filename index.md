@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div style="max-width: 800px; margin: 40px auto; padding: 40px 20px; background-color: white; min-height: 80vh;">
+<div markdown="1" style="max-width: 800px; margin: 40px auto; padding: 40px 20px; background-color: white; min-height: 80vh;">
 
 # 안녕하세요! 👋
 

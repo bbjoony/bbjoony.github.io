@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-<div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+<div markdown="1" style="max-width: 800px; margin: 0 auto; padding: 20px;">
 
 # About
 

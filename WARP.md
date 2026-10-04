@@ -4,23 +4,23 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-This is a Jekyll-based personal blog for a game QA professional, built with the Clean Blog Jekyll theme. The blog focuses on sharing experiences in game testing, daily life stories, and learning journeys.
+This is a Jekyll-based personal blog for a game QA professional. Layouts are based on the plainwhite theme (kept in the repo, no `theme:` set); GitHub Pages applies its default primer CSS. The blog focuses on sharing experiences in game testing, daily life stories, and learning journeys.
 
 ## Development Commands
 
 ### Build and Serve
 ```bash
-# Start Jekyll server locally
-jekyll serve
+# One-time setup (Homebrew Ruby 3.3, same Jekyll 3.10 as GitHub Pages)
+brew install ruby@3.3
+export PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH LANG=en_US.UTF-8
+bundle config set --local path vendor/bundle
+SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk bundle install
+
+# Start Jekyll server locally (http://localhost:4000)
+bundle exec jekyll serve
 
 # Build with draft posts visible
-jekyll serve --drafts
-
-# Build for production
-jekyll build
-
-# Serve with live reload
-jekyll serve --livereload
+bundle exec jekyll serve --drafts
 ```
 
 ### Content Management
@@ -28,24 +28,15 @@ jekyll serve --livereload
 # Create a new blog post (naming convention: YYYY-MM-DD-post-title.md)
 touch _posts/$(date +%Y-%m-%d)-new-post.md
 
-# Check for broken links
-jekyll build && jekyll doctor
-```
-
-### Dependencies
-```bash
-# Install npm dependencies for theme assets
-npm install
-
-# Update npm packages
-npm update
+# Check for problems
+bundle exec jekyll doctor
 ```
 
 ## Architecture and Structure
 
 ### Jekyll Configuration
-- **Main Config**: `_config.yml` - Site title, author info, theme settings (currently uses jekyll-theme-cayman)
-- **Theme Assets**: Bootstrap-based Clean Blog theme with custom JavaScript for dark mode and search functionality
+- **Main Config**: `_config.yml` - Site title, author info, `plainwhite:` settings read by the layouts, `exclude` list
+- **Theme Assets**: plainwhite JavaScript for dark mode and search (plainwhite CSS is not in the repo yet); Clean Blog leftovers (`package.json`, `img/`, `assets/scripts.js`) are unused
 - **Plugins**: jekyll-feed, jekyll-seo-tag for RSS and SEO optimization
 
 ### Content Organization
@@ -59,15 +50,13 @@ npm update
   - `assets/js/darkmode.js` - Dark mode toggle functionality
   - `assets/js/search.js` - Site search implementation
   - `assets/scripts.js` - Main theme scripts
-- **Styling**: Bootstrap 4.6.0 based with Font Awesome 4.7.0 icons
-- **Dependencies**: jQuery 3.6.0, startbootstrap-clean-blog 5.1.0
 
 ### Search Functionality
 The site implements Jekyll Simple Search plugin with a `search.json` file generated at build time containing post metadata for client-side search.
 
 ### Legacy Content
 - `-old/` directory contains previous Jekyll setup with Gemfile configuration
-- Migration from plainwhite theme to current Clean Blog theme
+- Migrated from Clean Blog theme to plainwhite-based layouts
 
 ## Post Front Matter Template
 ```yaml
@@ -83,5 +72,4 @@ categories: [카테고리1, 카테고리2]
 ## Site-Specific Notes
 - Blog is in Korean, focusing on game QA experiences
 - Images are stored in the root directory (e.g., conference photos)
-- No Gemfile in root - using system Jekyll installation
-- npm packages managed separately for theme assets
+- Root `Gemfile` (github-pages gem) is for local preview only; GitHub Pages builds with its own environment
