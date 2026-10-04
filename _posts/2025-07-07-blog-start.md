@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "블로그를 시작하며"
-subtitle: "중년 게임QA의 진짜 이야기"
+description: "중년 게임QA의 진짜 이야기"
 date: 2025-07-07 15:00:00 +0900
 categories: [일상, 시작]
 ---
