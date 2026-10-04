@@ -43,6 +43,9 @@
   이 공백이 남아 있으면 단어 단위 줄바꿈에서 줄이 괄호 같은 곳에서만 끊깁니다.
 - 댓글: giscus(`_config.yml` 의 `comments`). 댓글은 이 저장소 GitHub Discussions 의 Announcements 분류에 글마다 토론으로 저장됩니다.
   giscus GitHub App 은 이 저장소에만 설치했습니다. 댓글을 쓰려면 GitHub 로그인이 필요합니다.
+- 방문 통계: GoatCounter(`bbjoony.goatcounter.com`, `_config.yml` 의 `analytics.goatcounter`, `pageviews`). 글 상단에 글별 조회수가 나오고,
+  푸터에 사이트 전체 누적 방문자 수(`/counter/TOTAL.json`)를 `metadata-hook.html` 스크립트로 붙입니다.
+  GoatCounter Settings 의 "Allow adding visitor counts on your website" 가 켜져 있어야 숫자가 나옵니다. 집계 스크립트는 배포본에만 들어가 로컬 미리보기는 집계되지 않습니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
 - `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).

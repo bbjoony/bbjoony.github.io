@@ -194,3 +194,28 @@
     document.body.appendChild(btn);
   });
 </script>
+
+{% if site.analytics.goatcounter.id %}
+  <script>
+    /* 푸터 첫 줄(© 연도 작성자) 뒤에 GoatCounter 의 사이트 전체 누적 방문자 수를 붙입니다.
+       GoatCounter 설정의 "allow using the visitor counter" 가 꺼져 있거나 요청이 실패하면 아무것도 표시하지 않습니다. */
+    document.addEventListener('DOMContentLoaded', function () {
+      var target = document.querySelector('footer p');
+      if (!target) return;
+      fetch('https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/TOTAL.json')
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          var count = String(data.count).replace(/\D/g, '');
+          if (!count) return;
+          var span = document.createElement('span');
+          span.id = 'site-visitors';
+          span.textContent = ' · 누적 방문자 ' + new Intl.NumberFormat('ko-KR').format(count) + '명';
+          target.appendChild(span);
+        })
+        .catch(function () {});
+    });
+  </script>
+{% endif %}
