@@ -9,6 +9,7 @@ categories:
 tags:
   - 크레마카르타
   - claude
+  - sub-project
 image: /assets/img/posts/mutijbjt-yjueaws0.jpeg
 featured: true
 published: true
