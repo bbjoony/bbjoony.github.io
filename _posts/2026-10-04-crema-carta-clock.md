@@ -6,7 +6,7 @@ date: 2026-10-04 16:40:00 +0900
 tags:
   - 크레마카르타
 image: /assets/img/posts/mutijbjt-yjueaws0.jpeg
-featured: false
+featured: true
 published: true
 ---
 크레마 카르타를 구입한 지 10년이 지났습니다. 오랫동안 보아도 눈이 편안한 e-ink 디스플레이를 통해 짬짬이 남는 시간에 좋아하는 책들을 볼 수 있게 해준 고마운 기기였습니다. 하지만 세월 앞에는 장사가 없는 법입니다. 안드로이드 4.x 기반인 크레마 카르타를 지원하지 않는 서비스가 많아지면서, 작년부터는 커스텀 펌웨어를 올려도 기기에서 e-book을 정상적으로 볼 수 없었습니다.
