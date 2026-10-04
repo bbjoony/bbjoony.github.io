@@ -46,7 +46,7 @@
 - 방문 통계: GoatCounter(`bbjoony.goatcounter.com`, `_config.yml` 의 `analytics.goatcounter`, `pageviews`). 글 상단에 글별 조회수가 나오고,
   푸터에 사이트 전체 누적 방문자 수(`/counter/TOTAL.json`)를 `metadata-hook.html` 스크립트로 붙입니다.
   GoatCounter Settings 의 "Allow adding visitor counts on your website" 가 켜져 있어야 숫자가 나옵니다. 집계 스크립트는 배포본에만 들어가 로컬 미리보기는 집계되지 않습니다.
-- 홈 커버: `assets/img/cover/cover_01.jpg`(책상 사진, 모니터 화면은 업무 내용이 보이지 않도록 흐림 처리). 홈에 올리는 사진은 화면·문서에 업무 정보가 찍혔는지 먼저 확인합니다.
+- 홈 커버 이미지는 넣었다가 뺐습니다(2026-10-04, 모니터 흐림 처리가 어색함). 사진을 올릴 때는 화면·문서에 업무 정보가 찍혔는지 먼저 확인합니다.
 - `_tabs/`: 사이드바 메뉴(카테고리, 태그, 아카이브, 정보). 소개 글은 `_tabs/about.md` 입니다.
 - `_data/contact.yml`: 사이드바 하단 아이콘(GitHub, 이메일, RSS).
 - `assets/img/avatar.png`: 사이드바 프로필 사진(320×320 투명 배경 일러스트).
